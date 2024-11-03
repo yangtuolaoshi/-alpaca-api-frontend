@@ -1,0 +1,12 @@
+.mapContainer {
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.questTableContainer {
+    margin: auto;
+    margin-top: 16px;
+}

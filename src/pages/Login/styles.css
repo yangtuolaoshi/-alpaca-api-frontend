@@ -1,0 +1,45 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background-color: #51c4d3;*/
+}
+
+.loginForm {
+    width: 20vw;
+    background-color: white;
+    margin: 64px auto auto;
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 4px;
+}
+
+.title {
+    font-family: '华文隶书', sans-serif;
+    font-weight: initial;
+    font-size: 48px;
+    color: #51c4d3;
+    letter-spacing: 16px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.menu {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.tail {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 4px;
+    color: silver;
+    margin-bottom: 16px;
+}
