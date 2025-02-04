@@ -1,24 +1,17 @@
 import axios from "axios";
 
-export interface User {
-    id: number,
-    username: string,
-    password: string,
-    nickname: string,
-    createTime: string,
-    updateTime: string,
-    isDeleted: number,
-}
-
-export interface LoginRequest {
-    username: string,
-    password: string,
-}
-
-export async function userLogin(loginRequest: LoginRequest) {
+export async function userLogin(loginRequest) {
     const resp = await axios.post(
         "/api/user/login",
         loginRequest,
+    );
+    return resp.data;
+}
+
+export async function userRegister(registerRequest) {
+    const resp = await axios.post(
+        "/api/user/reg",
+        registerRequest,
     );
     return resp.data;
 }

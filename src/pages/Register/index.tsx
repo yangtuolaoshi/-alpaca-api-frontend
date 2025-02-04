@@ -1,13 +1,13 @@
 import React from 'react';
 import "./styles.css"
 import {Button, Checkbox, Form, Input, message, Watermark} from "antd";
-import {LockOutlined, UserOutlined} from "@ant-design/icons";
+import {LockOutlined, RobotOutlined, UserOutlined} from "@ant-design/icons";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {setUser} from "../../store/modules/UserStore";
-import {userLogin} from "../../apis/User";
+import {userRegister} from "../../apis/User";
 
-const Login = () => {
+const Register = () => {
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
@@ -16,11 +16,10 @@ const Login = () => {
 
     const onClick = async () => {
         const values = await loginForm.validateFields();
-        const resp = await userLogin(values);
+        const resp = await userRegister(values);
         if (resp.code === 200) {
-            dispatch(setUser(resp.data));
-            message.success("登陆成功！");
-            navigate("/");
+            message.success("注册成功，返回登录页！");
+            navigate("/login");
         } else {
             message.error(resp.msg);
         }
@@ -31,19 +30,30 @@ const Login = () => {
             <div className="loginContainer">
                 <div className="loginForm">
                     <div className="title">羊驼老师开放平台</div>
-                    {/*<div className="menu">管理平台</div>*/}
                     <Form name="loginForm" form={loginForm}>
-                        <Form.Item name="username">
+                        <Form.Item name="username" required>
                             <Input placeholder="请输入用户名" prefix={<UserOutlined />} />
                         </Form.Item>
-                        <Form.Item name="password">
+                        <Form.Item name="password" required>
                             <Input.Password placeholder="请输入密码" prefix={<LockOutlined />} />
                         </Form.Item>
-                        <Form.Item name="remember">
-                            <Checkbox>自动登录</Checkbox>
+                        <Form.Item name="repeatPassword">
+                            <Input.Password placeholder="请再次输入密码" prefix={<LockOutlined />} />
                         </Form.Item>
+                        <Form.Item name="nickname" required>
+                            <Input placeholder="请输入昵称" prefix={<RobotOutlined />}/>
+                        </Form.Item>
+                        <div className="extraMenu" style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "right"
+                        }}>
+                            <Button type="link" onClick={() => {
+                                navigate("/login");
+                            }}>已有账号？立即登录！</Button>
+                        </div>
                         <Form.Item>
-                            <Button type="primary" block onClick={onClick}>登录</Button>
+                            <Button type="primary" block onClick={onClick}>注册</Button>
                         </Form.Item>
                     </Form>
                     <div className="tail">- 羊驼老师开放平台 -</div>
@@ -53,4 +63,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

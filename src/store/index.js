@@ -1,11 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 // 导入子模块Reducer
-import coladminReducer from './modules/ColadminStore';
+import userReducer from './modules/UserStore';
 
 const store = configureStore({
     reducer: {
-        coladmin: coladminReducer,
+        user: userReducer,
     },
 });
 

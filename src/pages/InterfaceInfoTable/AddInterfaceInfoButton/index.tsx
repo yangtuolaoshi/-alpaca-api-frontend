@@ -2,7 +2,7 @@ import {Form, Input, message, Modal} from "antd";
 import TextArea from "antd/es/input/TextArea";
 import MonacoEditor from "react-monaco-editor";
 import React, {useState} from "react";
-import {addInterfaceInfo} from "../../../../apis/InterfaceInfo";
+import {addInterfaceInfo} from "../../../apis/InterfaceInfo";
 
 const AddInterfaceInfoModal = (
     {

@@ -1,5 +1,5 @@
 import {Alert, Button, message, Popconfirm} from "antd";
-import {deleteInterfaceInfoById} from "../../../../apis/InterfaceInfo";
+import {deleteInterfaceInfoById} from "../../../apis/InterfaceInfo";
 
 const DeleteInterfaceInfoButton = ({id, onSuccess}: {
     id: number,

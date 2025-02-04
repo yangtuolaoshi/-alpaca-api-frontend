@@ -1,6 +1,6 @@
 import {Form, List, message, Skeleton, TablePaginationConfig} from "antd";
 import {useEffect, useState} from "react";
-import {selectInterfaceInfoByPage} from "../../../apis/InterfaceInfo";
+import {selectInterfaceInfoByPage} from "../../apis/InterfaceInfo";
 
 const InterfaceInfoList = () => {
     const [data, setData] = useState([{id: 1, title: "蔡徐坤大战三百基佬", description: "蔡徐坤大战三百基佬蔡徐坤大战三百基佬蔡徐坤大战三百基佬", invokeNum: 114514}]);

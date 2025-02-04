@@ -1,6 +1,6 @@
 import {Button, Form, Input, message, Table, TablePaginationConfig, TableProps} from "antd";
 import {useEffect, useState} from "react";
-import {offlineInterfaceInfo, publishInterfaceInfo, selectInterfaceInfoByPage} from "../../../apis/InterfaceInfo";
+import {offlineInterfaceInfo, publishInterfaceInfo, selectInterfaceInfoByPage} from "../../apis/InterfaceInfo";
 import AddInterfaceInfoModal from "./AddInterfaceInfoButton";
 import InterfaceInfoModal from "./InterfaceInfoModal";
 import DeleteInterfaceInfoButton from "./DeleteInterfaceInfoButton";

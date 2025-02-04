@@ -1,7 +1,9 @@
 import {RouteObject, useNavigate, useRoutes} from "react-router-dom";
 import Login from "../pages/Login";
-import Home from "../pages/Home";
 import axios from "axios";
+import Home from "../pages/Home";
+import Register from "../pages/Register";
+import InterfaceInfoPage from "../pages/InterfaceInfoPage";
 
 const routes: RouteObject[] = [
     {
@@ -9,14 +11,21 @@ const routes: RouteObject[] = [
         element: <Login />,
     },
     {
+        path: "/register",
+        element: <Register />,
+    },
+    {
         path: "/",
-        element: <Home />
+        element: <Home />,
+    },
+    {
+        path: "/info",
+        element: <InterfaceInfoPage />,
     },
 ];
 
 const Router = () => {
     const navigate = useNavigate();
-    // const { token } = useSelector((state: any) => state.coladmin);
 
     axios.interceptors.response.use(
         response => {
@@ -32,7 +41,6 @@ const Router = () => {
             return Promise.reject(error);
         }
     );
-
     return useRoutes(routes);
 };
 

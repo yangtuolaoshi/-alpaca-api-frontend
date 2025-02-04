@@ -7,7 +7,7 @@
 }
 
 .loginForm {
-    width: 20vw;
+    width: 25vw;
     background-color: white;
     margin: 64px auto auto;
     padding-top: 32px;
@@ -17,14 +17,14 @@
 }
 
 .title {
-    font-family: '华文隶书', sans-serif;
+    font-family: '黑体', sans-serif;
     font-weight: initial;
     font-size: 48px;
-    color: #51c4d3;
-    letter-spacing: 16px;
+    color: #63bbd0;
+    /*letter-spacing: 16px;*/
     text-align: center;
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 64px;
 }
 
 .menu {
@@ -34,6 +34,13 @@
     text-align: center;
     margin-top: 0;
     margin-bottom: 16px;
+}
+
+.extraMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
 }
 
 .tail {

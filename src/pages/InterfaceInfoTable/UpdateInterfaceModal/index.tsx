@@ -1,5 +1,5 @@
 import {Form, Input, message, Modal} from "antd";
-import {updateInterfaceInfo} from "../../../../apis/InterfaceInfo";
+import {updateInterfaceInfo} from "../../../apis/InterfaceInfo";
 import React, {useEffect, useState} from "react";
 import TextArea from "antd/es/input/TextArea";
 import MonacoEditor from "react-monaco-editor";
